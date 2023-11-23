@@ -5,6 +5,7 @@ Grupo 2:
 	Alfredo		Huels		3496544498	
 	Gabriel 	Correa		3516271526	
 
-DER y Entidades, y mas en:
+DER: Archivo: Modelo de DB TPIntegrador.mwb
+ y Entidades, y mas en:
 
 https://github.com/Alb3rtoGitHub/TP-Integrador-Grupo-2.git

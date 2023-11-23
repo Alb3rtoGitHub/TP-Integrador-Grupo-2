@@ -1,0 +1,10 @@
+Grupo 2:
+	Nombre		Apellido	Celular	
+	Alberto		Vallecillo	2645328691	
+	Virginia	Avila		1126972253
+	Alfredo		Huels		3496544498	
+	Gabriel 	Correa		3516271526	
+
+DER y Entidades, y mas en:
+
+https://github.com/Alb3rtoGitHub/TP-Integrador-Grupo-2.git

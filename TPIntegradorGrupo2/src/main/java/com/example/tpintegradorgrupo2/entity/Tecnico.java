@@ -1,10 +1,13 @@
 package com.example.tpintegradorgrupo2.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Entity
 @Data
@@ -22,4 +25,12 @@ public class Tecnico {
     private String mail;
     @Column(nullable = false, length = 20)
     private String numTel;
+
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @ManyToMany(fetch = FetchType.LAZY) //como quiero que se levanten los datos LAZY o EAGER(me lo deja en memoria)
+    @JoinTable(
+            name = "tecnicoEspecialidad",
+            joinColumns = @JoinColumn(name = "idTecnico"),
+            inverseJoinColumns = @JoinColumn(name = "idEspecialidad"))
+    private Set<Especialidad> especialidades;
 }

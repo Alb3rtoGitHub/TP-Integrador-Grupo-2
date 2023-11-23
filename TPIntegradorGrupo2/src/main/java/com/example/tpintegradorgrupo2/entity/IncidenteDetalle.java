@@ -36,9 +36,4 @@ public class IncidenteDetalle {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="idTipoProblema", nullable=false)
     private TipoProblema tipoProblema;
-
-
-    // COMO HAGO CON ESTO?  private Incidente incidente;
-    // COMO HAGO CON ESTO?  private Servicio servicio;
-    // COMO HAGO CON ESTO ? private TipoProblema tipoProblema;
 }

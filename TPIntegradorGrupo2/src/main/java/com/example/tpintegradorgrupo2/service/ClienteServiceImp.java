@@ -3,9 +3,11 @@ package com.example.tpintegradorgrupo2.service;
 import com.example.tpintegradorgrupo2.entity.Cliente;
 import com.example.tpintegradorgrupo2.respository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ClienteServiceImp implements ClienteService{
 
     @Autowired

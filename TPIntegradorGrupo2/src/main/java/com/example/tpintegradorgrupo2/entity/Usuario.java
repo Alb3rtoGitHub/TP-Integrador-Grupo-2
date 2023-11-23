@@ -1,5 +1,6 @@
 package com.example.tpintegradorgrupo2.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,5 +21,9 @@ public class Usuario {
     private String nombre;
     @Column(nullable = false, length = 255)
     private String pass;
-    //COMO HAGO CON ESTO? private Rol rol;
+
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="idRol", nullable=false)
+    private Rol rol;
 }

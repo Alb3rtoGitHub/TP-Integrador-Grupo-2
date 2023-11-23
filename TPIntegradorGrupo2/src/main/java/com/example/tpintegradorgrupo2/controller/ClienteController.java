@@ -15,7 +15,7 @@ public class ClienteController {
 
     @GetMapping("/viewClientes")
     public String viewBooks(Model model) {
-        model.getAttribute("clientes");
+        model.getAttribute("clientes", clienteService.getAllClientes());
         return "view-clientes";
     }
 

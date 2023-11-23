@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -18,4 +20,10 @@ public class Especialidad {
     private Long idEspecialidad;
     @Column(nullable = false, length = 255)
     private String nombre;
+
+    @ManyToMany(mappedBy = "especialidades")
+    private Set<Tecnico> tecnicos;
+
+    @ManyToMany(mappedBy = "especialidades")
+    private Set<TipoProblema> tipoProblemas;
 }

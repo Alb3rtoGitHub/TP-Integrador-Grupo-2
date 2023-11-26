@@ -20,4 +20,7 @@ public class Rol {
     private Long idRol;
     @Column(nullable = false, length = 255)
     private String rol;
+
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private Set<Usuario> usuarios;
 }

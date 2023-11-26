@@ -33,4 +33,7 @@ public class Tecnico {
             joinColumns = @JoinColumn(name = "idTecnico"),
             inverseJoinColumns = @JoinColumn(name = "idEspecialidad"))
     private Set<Especialidad> especialidades;
+
+    @OneToMany(mappedBy = "tecnico", cascade = CascadeType.ALL)
+    private Set<Incidente> incidentes;
 }

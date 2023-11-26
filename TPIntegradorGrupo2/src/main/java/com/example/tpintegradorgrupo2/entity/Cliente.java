@@ -34,4 +34,7 @@ public class Cliente {
             joinColumns = @JoinColumn(name = "idCliente"),
             inverseJoinColumns = @JoinColumn(name = "idServicio"))
     private Set<Servicio> servicios;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private Set<Incidente> incidentes;
 }

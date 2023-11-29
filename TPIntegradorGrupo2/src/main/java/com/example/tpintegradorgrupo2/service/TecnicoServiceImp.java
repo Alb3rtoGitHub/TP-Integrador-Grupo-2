@@ -25,7 +25,7 @@ public class TecnicoServiceImp implements TecnicoService{
 
     @Override
     public Tecnico updateTecnico(Tecnico tecnico, Long idTecnico) {
-        Tecnico tecnicoDB = tecnicoRespository.findById(idTecnico).get();
+        Tecnico tecnicoDB = tecnicoRespository.getReferenceById(idTecnico);
         if (!tecnico.getNombre().trim().isEmpty()){
             tecnicoDB.setNombre(tecnico.getNombre());
         }

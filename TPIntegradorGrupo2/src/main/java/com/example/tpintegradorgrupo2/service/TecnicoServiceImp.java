@@ -35,6 +35,9 @@ public class TecnicoServiceImp implements TecnicoService{
         if (!tecnico.getNumTel().trim().isEmpty()){
             tecnicoDB.setNumTel(tecnico.getNumTel());
         }
+        tecnicoDB.setEspecialidades(tecnico.getEspecialidades());
+        tecnicoDB.setIncidentes(tecnico.getIncidentes());
+
         return tecnicoRespository.save(tecnicoDB);
     }
 

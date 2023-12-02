@@ -35,6 +35,9 @@ public class ClienteServiceImp implements ClienteService{
         if (!cliente.getMail().trim().isEmpty()){
             clienteDB.setMail(cliente.getMail());
         }
+        clienteDB.setIncidentes(cliente.getIncidentes());
+        clienteDB.setServicios(cliente.getServicios());
+
         return clienteRepository.save(clienteDB);
     }
 

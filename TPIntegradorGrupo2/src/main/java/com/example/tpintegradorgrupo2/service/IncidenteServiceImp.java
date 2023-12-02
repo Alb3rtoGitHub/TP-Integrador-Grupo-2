@@ -1,7 +1,6 @@
 package com.example.tpintegradorgrupo2.service;
 
 import com.example.tpintegradorgrupo2.entity.Incidente;
-import com.example.tpintegradorgrupo2.entity.Servicio;
 import com.example.tpintegradorgrupo2.respository.IncidenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,6 +44,14 @@ public class IncidenteServiceImp implements IncidenteService {
         if (!incidente.getConsideraciones().trim().isEmpty()){
             incidenteDB.setConsideraciones(incidente.getConsideraciones());
         }
+        if (incidente.getCliente() != null){
+            incidenteDB.setCliente(incidente.getCliente());
+        }
+        if (incidente.getTecnico() != null){
+            incidenteDB.setTecnico(incidente.getTecnico());
+        }
+        incidenteDB.setIncidenteDetalles(incidente.getIncidenteDetalles());
+
         return incidenteRepository.save(incidenteDB);
     }
 

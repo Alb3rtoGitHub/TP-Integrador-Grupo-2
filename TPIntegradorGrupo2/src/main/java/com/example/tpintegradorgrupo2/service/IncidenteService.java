@@ -19,5 +19,5 @@ public interface IncidenteService {
     //Delete
     void deleteIncidenteById(Long idIncidente);
 
-    Incidente findIncidenteById(Long aLong);
+    Incidente findIncidenteById(Long idIncidente);
 }

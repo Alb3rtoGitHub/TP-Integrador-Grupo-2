@@ -1,6 +1,8 @@
 package com.example.tpintegradorgrupo2.controller;
 
-import com.example.tpintegradorgrupo2.entity.*;
+import com.example.tpintegradorgrupo2.entity.Especialidad;
+import com.example.tpintegradorgrupo2.entity.Incidente;
+import com.example.tpintegradorgrupo2.entity.Tecnico;
 import com.example.tpintegradorgrupo2.service.EspecialidadService;
 import com.example.tpintegradorgrupo2.service.IncidenteService;
 import com.example.tpintegradorgrupo2.service.TecnicoService;

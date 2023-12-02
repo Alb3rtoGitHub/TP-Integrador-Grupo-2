@@ -44,5 +44,5 @@ public class Incidente {
     private Tecnico tecnico;
 
     @OneToMany(mappedBy = "incidente", cascade = CascadeType.ALL)
-    private Set<IncidenteDetalle> detalles;
+    private Set<IncidenteDetalle> incidenteDetalles;
 }

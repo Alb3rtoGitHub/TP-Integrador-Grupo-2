@@ -1,6 +1,7 @@
 package com.example.tpintegradorgrupo2.service;
 
 import com.example.tpintegradorgrupo2.entity.Incidente;
+import com.example.tpintegradorgrupo2.entity.Servicio;
 import com.example.tpintegradorgrupo2.respository.IncidenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,5 +51,10 @@ public class IncidenteServiceImp implements IncidenteService {
     @Override
     public void deleteIncidenteById(Long idIncidente) {
         incidenteRepository.deleteById(idIncidente);
+    }
+
+    @Override
+    public Incidente findIncidenteById(Long idIncidente) {
+        return incidenteRepository.getReferenceById(idIncidente);
     }
 }

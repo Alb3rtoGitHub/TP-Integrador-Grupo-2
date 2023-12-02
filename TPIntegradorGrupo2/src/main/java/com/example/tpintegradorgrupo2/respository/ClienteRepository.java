@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-    //si quiero agregar un metodo
+    //si quiero agregar un método
     //@Query("SELECT * FROM cliente WHERE activo = 1")
     //ArrayList<Cliente> getAllClientesActivos();
 }

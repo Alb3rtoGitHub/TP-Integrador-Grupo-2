@@ -10,6 +10,8 @@ import java.util.List;
 
 @RestController
 public class TecnicoRestController {
+
+    // en proceso de escribir codigo y corregir
     @Autowired
     private TecnicoService tecnicoService;
 

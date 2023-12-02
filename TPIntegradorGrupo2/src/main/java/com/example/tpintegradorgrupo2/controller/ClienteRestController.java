@@ -71,7 +71,8 @@ public class ClienteRestController {
 
     //Update
     @PutMapping("/clientes/{idCliente}")
-    public Cliente updateCliente(@RequestBody Map<String, Object> body, @PathVariable("id") Long idCliente){
+    public Cliente updateCliente(@RequestBody Map<String, Object> body, @PathVariable("idCliente") Long idCliente){
+
         //CREACION DEL OBJETO CLIENTE
         Cliente c = new Cliente();
 

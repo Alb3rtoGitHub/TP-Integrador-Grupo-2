@@ -13,9 +13,13 @@ public interface ClienteService {
     //Read
     List<Cliente> getAllClientes();
 
+    Cliente leerCliente();
+
     //Update
     Cliente updateCliente(Cliente cliente, Long idCliente);
 
     //Delete
     void deleteClienteById(Long idCliente);
+
+    Cliente findClienteById(Long idCliente);
 }

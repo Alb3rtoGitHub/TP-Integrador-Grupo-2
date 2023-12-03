@@ -24,6 +24,11 @@ public class ClienteServiceImp implements ClienteService{
     }
 
     @Override
+    public Cliente leerCliente() {
+        return clienteRepository.findOne();
+    }
+
+    @Override
     public Cliente updateCliente(Cliente cliente, Long idCliente) {
         Cliente clienteDB = clienteRepository.getReferenceById(idCliente);
         if (!cliente.getRazonSocial().trim().isEmpty()){
@@ -44,5 +49,10 @@ public class ClienteServiceImp implements ClienteService{
     @Override
     public void deleteClienteById(Long idCliente) {
         clienteRepository.deleteById(idCliente);
+    }
+
+    @Override
+    public Cliente findClienteById(Long idCliente) {
+        return clienteRepository.getReferenceById(idCliente);
     }
 }

@@ -29,6 +29,6 @@ public class TipoProblema {
     @JoinTable(
             name = "tipoProblemaEspecialidad",
             joinColumns = @JoinColumn(name = "idTipoProblema"),
-            inverseJoinColumns = @JoinColumn(name = "idEspecilidad"))
+            inverseJoinColumns = @JoinColumn(name = "idEspecialidad"))
     private Set<Especialidad> especialidades;
 }

@@ -45,4 +45,9 @@ public class TecnicoServiceImp implements TecnicoService{
     public void deleteTecnicoById(Long idTecnico) {
         tecnicoRespository.deleteById(idTecnico);
     }
+
+    @Override
+    public Tecnico findTecnicoById(Long idTecnico) {
+        return tecnicoRespository.getReferenceById(idTecnico);
+    }
 }

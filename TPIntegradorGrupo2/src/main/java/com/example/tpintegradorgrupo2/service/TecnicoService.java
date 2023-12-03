@@ -18,4 +18,6 @@ public interface TecnicoService {
 
     //Delete
     void deleteTecnicoById(Long idTecnico);
+
+    Tecnico findTecnicoById(Long idTecnico);
 }

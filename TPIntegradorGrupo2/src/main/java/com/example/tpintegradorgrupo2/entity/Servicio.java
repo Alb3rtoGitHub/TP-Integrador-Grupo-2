@@ -22,5 +22,5 @@ public class Servicio {
     private String nombre;
 
     @ManyToMany(mappedBy = "servicios")
-    private Set<Cliente> clientes;
+    Set<Cliente> clientes;
 }

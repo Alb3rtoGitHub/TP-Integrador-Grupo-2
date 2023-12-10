@@ -4,6 +4,7 @@ import com.example.tpintegradorgrupo2.entity.Cliente;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public interface ClienteService {
@@ -12,8 +13,6 @@ public interface ClienteService {
 
     //Read
     List<Cliente> getAllClientes();
-
-    Cliente leerCliente();
 
     //Update
     Cliente updateCliente(Cliente cliente, Long idCliente);

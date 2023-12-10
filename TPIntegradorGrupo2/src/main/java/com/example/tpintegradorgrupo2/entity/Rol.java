@@ -16,11 +16,11 @@ import java.util.Set;
 @Table(name = "rol")
 public class Rol {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRol;
     @Column(nullable = false, length = 255)
     private String rol;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private Set<Usuario> usuarios;
+    @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL)
+    Set<Usuario> usuarios;
 }

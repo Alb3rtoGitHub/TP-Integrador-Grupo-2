@@ -22,8 +22,8 @@ public class Especialidad {
     private String nombre;
 
     @ManyToMany(mappedBy = "especialidades")
-    private Set<Tecnico> tecnicos;
+    Set<Tecnico> tecnicos;
 
     @ManyToMany(mappedBy = "especialidades")
-    private Set<TipoProblema> tipoProblemas;
+    Set<TipoProblema> tipoProblemas;
 }

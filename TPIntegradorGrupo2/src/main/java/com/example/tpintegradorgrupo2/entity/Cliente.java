@@ -14,13 +14,13 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-//@Table(name = "cliente")
+@Table(name = "cliente")
 public class Cliente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCliente;
-    @Column(nullable = false, length = 255) //es necesario poner el nombre de columna? No es necesario
+    @Column(nullable = false, length = 255) //¿es necesario poner el nombre de columna? No es necesario
     private String razonSocial;
     @Column(nullable = false, length = 20)
     private String cuit;
@@ -33,8 +33,8 @@ public class Cliente {
             name = "clienteServicio",
             joinColumns = @JoinColumn(name = "idCliente"),
             inverseJoinColumns = @JoinColumn(name = "idServicio"))
-    private Set<Servicio> servicios;
+    Set<Servicio> servicios;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private Set<Incidente> incidentes;
+    Set<Incidente> incidentes;
 }

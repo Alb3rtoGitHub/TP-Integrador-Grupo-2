@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteServiceImp implements ClienteService{
@@ -20,12 +21,8 @@ public class ClienteServiceImp implements ClienteService{
 
     @Override
     public List<Cliente> getAllClientes() {
+        System.out.println(clienteRepository.findAll());
         return clienteRepository.findAll();
-    }
-
-    @Override
-    public Cliente leerCliente() {
-        return clienteRepository.findOne();
     }
 
     @Override
@@ -40,8 +37,8 @@ public class ClienteServiceImp implements ClienteService{
         if (!cliente.getMail().trim().isEmpty()){
             clienteDB.setMail(cliente.getMail());
         }
-        clienteDB.setIncidentes(cliente.getIncidentes());
         clienteDB.setServicios(cliente.getServicios());
+        clienteDB.setIncidentes(cliente.getIncidentes());
 
         return clienteRepository.save(clienteDB);
     }
